@@ -6,11 +6,9 @@ function buildStyles() {
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest('./css'));
 };
-
 exports.buildStyles = buildStyles;
 
 function watch() {
   gulp.watch('./scss/**/*.scss', gulp.series('buildStyles'));
 };
-
 exports.watch = watch;
